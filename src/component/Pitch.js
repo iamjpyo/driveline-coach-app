@@ -6,6 +6,11 @@ export const Pitch = () => {
     const [firstClick, setFirstClick] = useState(0);
     const [secondClick, setSecondClick] = useState(0);
 
+    const reset = () => {
+        setFirstClick(0);
+        setSecondClick(0);
+    }
+
     return(
         <div className='Pitch'>
 
@@ -37,7 +42,7 @@ export const Pitch = () => {
                 </div>
         <div>Firstclick {firstClick}</div>
         <div>Secondclick {secondClick}</div>
-            <button>Undo Pitch</button>
+            <button onClick={reset}>Undo Pitch</button>
             <button>Next Pitch</button>
             <button>End and Save Session</button>
         </div>
