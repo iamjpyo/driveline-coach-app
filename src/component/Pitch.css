@@ -13,6 +13,9 @@
     background-color: #cec9c9;
 }
 
+.first-row div:hover{
+    background-color: #BFD7ED;
+}
 
 /*SECOND GROUP */
 .second-row{
@@ -22,6 +25,9 @@
 .second-row div{
     border-style: solid;
     background-color: #cec9c9;
+}
+.second-row div:hover{
+    background-color: #BFD7ED;
 }
 .second-row-inner{
     padding-top: 5.5em;
@@ -54,4 +60,56 @@
     padding-top: 30px;
     padding-bottom: 30px;
     background-color: #cec9c9;
+}
+.third-row div:hover{
+    background-color: #BFD7ED;
+}
+
+/*Coordinate classes */
+.position11{
+    position: absolute;
+    color: #FFA500;
+    z-index: 5;
+    margin-left: 26.3em;
+    margin-top: -2px;
+    font-size: 36px;
+}
+.position12{
+    width: 5%;
+}
+.position13{
+    width: 5%;
+}
+.position7{
+    width: 5%;
+}
+.position8{
+    width: 5%;
+}
+.position9{
+    width: 5%;
+}
+.position0{
+    width: 5%;
+}
+.position5{
+    width: 5%;
+}
+.position0{
+    width: 5%;
+}
+.position1{
+    width: 5%;
+}
+.position14{
+    width: 5%;
+}
+.position3{
+    width: 5%;
+}
+.position10{
+    width: 5%;
+}
+.position15{
+    width: 5%;
 }

@@ -22,24 +22,23 @@ export const Pitch = () => {
             ]
             setTheArray(updatePitch)
             reset();
-            console.log(theArray)
+            alert("Coordinates successfully stored!")
         } else{
             alert("Please enter a desired Pitch and where Pitch actually landed.")
         }
 
-    }
-    
+    } 
 
     const reset = () => {
         setFirstClick(null);
         setSecondClick(null);
     }
 
-    const requestedPitch = firstClick === null ? <img src={driveline} alt="Desired Pitch" /> : null;
+    const requestedPitch = firstClick !== null ? <h1 className={`position${firstClick}`}>O</h1> : null;
 
     return(
         <div className='Pitch'>
-
+                {requestedPitch}
                 <div className='first-row'>
                         <div value={11} onClick={() => firstClick === null ? setFirstClick(11) : secondClick === null ? setSecondClick(11): secondClick}>11</div>
                 </div>
@@ -70,8 +69,8 @@ export const Pitch = () => {
             <button onClick={reset}>Undo Pitch</button>
             <button onClick={nextPitch}>Next Pitch</button>
             <button>End and Save Session</button>
-            <div>Requested Pitch: {firstClick}</div>
-        <div>Actual Pitch: {secondClick}</div>
+            <div>Intended pitch location: {firstClick}</div>
+            <div>Actual pitch location: {secondClick}</div>
         </div>
     )
 }
