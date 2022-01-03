@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/driveline-coach-app/static/css/main.e9e81755.css",
-    "main.js": "/driveline-coach-app/static/js/main.b6924b27.js",
+    "main.css": "/driveline-coach-app/static/css/main.4bd8669a.css",
+    "main.js": "/driveline-coach-app/static/js/main.fcf63c5a.js",
     "static/js/787.cfd8f164.chunk.js": "/driveline-coach-app/static/js/787.cfd8f164.chunk.js",
     "static/media/driveline.png": "/driveline-coach-app/static/media/driveline.50ae58249f2407b79b1a.png",
     "index.html": "/driveline-coach-app/index.html",
-    "main.e9e81755.css.map": "/driveline-coach-app/static/css/main.e9e81755.css.map",
-    "main.b6924b27.js.map": "/driveline-coach-app/static/js/main.b6924b27.js.map",
+    "main.4bd8669a.css.map": "/driveline-coach-app/static/css/main.4bd8669a.css.map",
+    "main.fcf63c5a.js.map": "/driveline-coach-app/static/js/main.fcf63c5a.js.map",
     "787.cfd8f164.chunk.js.map": "/driveline-coach-app/static/js/787.cfd8f164.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e9e81755.css",
-    "static/js/main.b6924b27.js"
+    "static/css/main.4bd8669a.css",
+    "static/js/main.fcf63c5a.js"
   ]
 }
