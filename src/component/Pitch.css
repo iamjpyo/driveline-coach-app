@@ -2,7 +2,7 @@
 .first-row{
     display: flex;
     justify-content: center;
-    margin-top: 10%;
+    margin-top: 10em;
 }
 .first-row div{
     border-style: solid;
@@ -66,50 +66,83 @@
 }
 
 /*Coordinate classes */
-.position11{
+.ostyle{
     position: absolute;
-    color: #FFA500;
-    z-index: 5;
-    margin-left: 26.3em;
-    margin-top: -2px;
+    color: #ff7300;
+    z-index: 2;
+}
+.xstyle{
+    position: absolute;
+    color: #00000060;
+    z-index: 3;
+}
+.position11{
+    margin-top: -30px;
+    margin-left: -5px;
     font-size: 36px;
 }
 .position12{
-    width: 5%;
+    margin-top: -30px;
+    margin-left: -5px;
+    font-size: 36px;
 }
 .position13{
-    width: 5%;
+    margin-top: -30px;
+    margin-left: -5px;
+    font-size: 36px;
 }
 .position7{
-    width: 5%;
+    margin-top: -30px;
+    margin-left: 4px;
+    font-size: 36px;
 }
 .position8{
-    width: 5%;
+    margin-top: -30px;
+    margin-left: 4px;
+    font-size: 36px;
 }
 .position9{
-    width: 5%;
+    margin-top: -30px;
+    margin-left: 4px;
+    font-size: 36px;
 }
 .position0{
-    width: 5%;
+    margin-top: -30px;
+    margin-left: 4px;
+    font-size: 36px;
 }
 .position5{
-    width: 5%;
+    margin-top: -30px;
+    margin-left: 4px;
+    font-size: 36px;
 }
 .position0{
-    width: 5%;
+    margin-top: -30px;
+    margin-left: 4px;
+    font-size: 36px;
 }
 .position1{
-    width: 5%;
+    margin-top: -30px;
+    margin-left: 4px;
+    font-size: 36px;
 }
 .position14{
-    width: 5%;
+    margin-top: -30px;
+    margin-left: 4px;
+    font-size: 36px;
 }
 .position3{
-    width: 5%;
+    margin-top: -30px;
+    margin-left: 4px;
+    font-size: 36px;
 }
 .position10{
-    width: 5%;
+    margin-top: -30px;
+    margin-left: -4px;
+    font-size: 36px;
 }
 .position15{
-    width: 5%;
+    margin-top: -30px;
+    margin-left: -4px;
+    font-size: 36px;
 }
