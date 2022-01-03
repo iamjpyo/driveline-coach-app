@@ -39,6 +39,7 @@ export const Pitch = () => {
 
     return(
         <div className='Pitch'>
+            <img className='logo' src={driveline} alt="Driveline Baseball logo" />
                 <div className='first-row'>
                         <div value={11} onClick={() => firstClick === null ? setFirstClick(11) : secondClick === null ? setSecondClick(11): secondClick}>
                             11 {firstClick === 11 ? requestedPitch : null}{secondClick === 11 ? requestedPitch2 : null}
