@@ -1,25 +1,27 @@
 import React, { useState} from 'react';
 import "./Pitch.css";
-import driveline from "../images/driveline.png"
+import driveline from "../images/driveline.png";
 
 export const Pitch = () => {
 
     const [firstClick, setFirstClick] = useState(null);
     const [secondClick, setSecondClick] = useState(null);
-   
+    const [toggle, setToggle] = useState(false);
+
+
     /* Empty array to be filled */
     const [theArray, setTheArray] = useState([]);
     const timestamp = Date.now();
     /* Something to save current states as object and then push into empty array*/
+    let updatePitch = [
+        ...theArray,
+        {   date: new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2-digit',day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit'}).format(timestamp),
+            coach: firstClick,
+            pitcher: secondClick
+        }
+    ]
     const nextPitch = () =>{
         if(firstClick !== null && secondClick !== null){
-            const updatePitch = [
-                ...theArray,
-                {   date: new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2-digit',day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit'}).format(timestamp),
-                    coach: firstClick,
-                    pitcher: secondClick
-                }
-            ]
             setTheArray(updatePitch)
             reset();
             alert("Coordinates successfully stored!")
@@ -30,6 +32,17 @@ export const Pitch = () => {
 
     } 
 
+    const endIt = () =>{
+        if(firstClick !== null && secondClick !== null){
+            setTheArray(updatePitch)
+            reset();
+            setToggle(true);
+            alert("Session ended!")
+        } else{
+            alert("Please enter a desired Pitch and where Pitch actually landed.")
+        }
+    }
+
     const reset = () => {
         setFirstClick(null);
         setSecondClick(null);
@@ -37,6 +50,7 @@ export const Pitch = () => {
 
     const requestedPitch = firstClick !== null ? <p className={`position${firstClick} ostyle`}>O</p> : null;
     const requestedPitch2 = secondClick !== null ? <h1 className={`position${secondClick} xstyle`}>X</h1> : null;
+
 
     return(
         <div className='Pitch'>
@@ -74,8 +88,21 @@ export const Pitch = () => {
             
             <button onClick={reset}>Undo Pitch</button>
             <button onClick={nextPitch}>Next Pitch</button>
-            <button>End and Save Session</button>
+            <button onClick={endIt}>End and Save Session</button>
+            {toggle && (
+                <ul>
+                    {theArray.map((e) => (
+                        <ul>
+                            <li>Date and Time: {e.date}</li>
+                            <li>Intended pitch: {e.coach}</li>
+                            <li>Actual pitch: {e.pitcher}</li>
+                        </ul>
 
+                    )
+
+                    )}
+                </ul>
+            )}
         </div>
     )
 }
