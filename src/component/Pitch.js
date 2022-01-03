@@ -48,6 +48,10 @@ export const Pitch = () => {
 
     const requestedPitch = firstClick !== null ? <p className={`position${firstClick} ostyle`}>O</p> : null;
     const requestedPitch2 = secondClick !== null ? <h1 className={`position${secondClick} xstyle`}>X</h1> : null;
+    const requestedPitch01 = firstClick !== null ? <h1 className={`position01 ostyle`}>O</h1> : null;
+    const requestedPitch02 = firstClick !== null ? <h1 className={`position02 ostyle`}>O</h1> : null;
+    const requestedPitchX01 = secondClick !== null ? <h1 className={`position01 xstyle`}>X</h1> : null;
+    const requestedPitchX02 = secondClick !== null ? <h1 className={`position02 xstyle`}>X</h1> : null;
 
 
     return(
@@ -66,9 +70,9 @@ export const Pitch = () => {
                         <div className='middle-group-inner' value={7} onClick={() => firstClick === null ? setFirstClick(7) : secondClick === null ? setSecondClick(7): secondClick}>7{firstClick === 7 ? requestedPitch : null}{secondClick === 7 ? requestedPitch2 : null}</div>
                         <div className='middle-group-inner' value={8} onClick={() => firstClick === null ? setFirstClick(8) : secondClick === null ? setSecondClick(8): secondClick}>8{firstClick === 8 ? requestedPitch : null}{secondClick === 8 ? requestedPitch2 : null}</div>
                         <div className='middle-group-inner' value={9} onClick={() => firstClick === null ? setFirstClick(9) : secondClick === null ? setSecondClick(9): secondClick}>9{firstClick === 9 ? requestedPitch : null}{secondClick === 9 ? requestedPitch2 : null}</div>
-                        <div className='middle-group-inner' value={null} onClick={() => firstClick === null ? setFirstClick(0) : secondClick === null ? setSecondClick(0): secondClick}>{firstClick === 0 ? requestedPitch : null}{secondClick === 0 ? requestedPitch2 : null}</div>
+                        <div className='middle-group-inner' value={null} onClick={() => firstClick === null ? setFirstClick("Left 0") : secondClick === null ? setSecondClick("Left 0"): secondClick}>{firstClick === "Left 0" ? requestedPitch01 : null}{secondClick === "Left 0" ? requestedPitchX01 : null}</div>
                         <div className='middle-group-inner' value={5} onClick={() => firstClick === null ? setFirstClick(5) : secondClick === null ? setSecondClick(5): secondClick}>5{firstClick === 5 ? requestedPitch : null}{secondClick === 5 ? requestedPitch2 : null}</div>
-                        <div className='middle-group-inner' value={null} onClick={() => firstClick === null ? setFirstClick(0) : secondClick === null ? setSecondClick(0): secondClick}>{firstClick === 0 ? requestedPitch : null}{secondClick === 0 ? requestedPitch2 : null}</div>
+                        <div className='middle-group-inner' value={null} onClick={() => firstClick === null ? setFirstClick("Right 0") : secondClick === null ? setSecondClick("Right 0"): secondClick}>{firstClick === "Right 0" ? requestedPitch02 : null}{secondClick === "Right 0" ? requestedPitchX02 : null}</div>
                         <div className='middle-group-inner' value={1} onClick={() => firstClick === null ? setFirstClick(1) : secondClick === null ? setSecondClick(1): secondClick}>1{firstClick === 1 ? requestedPitch : null}{secondClick === 1 ? requestedPitch2 : null}</div>
                         <div className='middle-group-inner' value={14} onClick={() => firstClick === null ? setFirstClick(14) : secondClick === null ? setSecondClick(14): secondClick}>14{firstClick === 14 ? requestedPitch : null}{secondClick === 14 ? requestedPitch2 : null}</div>
                         <div className='middle-group-inner' value={3} onClick={() => firstClick === null ? setFirstClick(3) : secondClick === null ? setSecondClick(3): secondClick}>3{firstClick === 3 ? requestedPitch : null}{secondClick === 3 ? requestedPitch2 : null}</div>
