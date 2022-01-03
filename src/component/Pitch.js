@@ -35,12 +35,10 @@ export const Pitch = () => {
     const endIt = () =>{
         if(firstClick !== null && secondClick !== null){
             setTheArray(updatePitch)
+        }
             reset();
             setToggle(true);
             alert("Session ended!")
-        } else{
-            alert("Please enter a desired Pitch and where Pitch actually landed.")
-        }
     }
 
     const reset = () => {
