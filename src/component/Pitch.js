@@ -9,13 +9,13 @@ export const Pitch = () => {
    
     /* Empty array to be filled */
     const [theArray, setTheArray] = useState([]);
-
+    const timestamp = Date.now();
     /* Something to save current states as object and then push into empty array*/
     const nextPitch = () =>{
         if(firstClick !== null && secondClick !== null){
             const updatePitch = [
                 ...theArray,
-                {
+                {   date: new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2-digit',day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit'}).format(timestamp),
                     coach: firstClick,
                     pitcher: secondClick
                 }
@@ -23,6 +23,7 @@ export const Pitch = () => {
             setTheArray(updatePitch)
             reset();
             alert("Coordinates successfully stored!")
+            console.log(theArray);
         } else{
             alert("Please enter a desired Pitch and where Pitch actually landed.")
         }
@@ -68,12 +69,13 @@ export const Pitch = () => {
                         <div value={10} onClick={() => firstClick === null ? setFirstClick(10) : secondClick === null ? setSecondClick(10): secondClick}>10{firstClick === 10 ? requestedPitch : null}{secondClick === 10 ? requestedPitch2 : null}</div>
                         <div value={15} onClick={() => firstClick === null ? setFirstClick(15) : secondClick === null ? setSecondClick(15): secondClick}>15{firstClick === 15 ? requestedPitch : null}{secondClick === 15 ? requestedPitch2 : null}</div>
                 </div>
-
+            <div>Intended pitch location: {firstClick}</div>
+            <div>Actual pitch location: {secondClick}</div>
+            
             <button onClick={reset}>Undo Pitch</button>
             <button onClick={nextPitch}>Next Pitch</button>
             <button>End and Save Session</button>
-            <div>Intended pitch location: {firstClick}</div>
-            <div>Actual pitch location: {secondClick}</div>
+
         </div>
     )
 }
